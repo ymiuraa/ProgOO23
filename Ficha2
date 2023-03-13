@@ -1,0 +1,284 @@
+(1)
+package ficha2;
+import java.util.Scanner;
+
+public class ex1 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Digite um número inteiro: ");
+		int numero1 = scanner.nextInt();
+
+		System.out.print("Digite outro número: ");
+		int numero2 = scanner.nextInt();
+
+		int maior = 0;
+
+		if(numero1 > numero2) {
+			maior = numero1;
+		}
+		else {
+			maior = numero2;
+		}
+		System.out.println(maior);
+	}	
+}
+
+(2)
+package ficha2;
+import java.util.Scanner;
+
+public class ex2 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Digite um número inteiro: ");
+		int numero = scanner.nextInt();
+
+		if (numero % 2 == 0) {
+			System.out.println("PAR");
+		} else {
+			System.out.println("ÍMPAR");
+		}
+	}
+}
+
+(3)
+package ficha2;
+import java.util.Scanner;
+
+public class ex3 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Digite um número inteiro: ");
+		int numero = scanner.nextInt();
+
+		if (numero > 0) {
+			System.out.println("Positivo");
+		} else if (numero < 0) {
+			System.out.println("Negativo");
+		} else {
+			System.out.println("Nulo");
+		}
+	}
+}
+
+(4)
+package ficha2;
+import java.util.Scanner;
+
+public class ex4 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Digite a primeira nota: ");
+		double nota1 = input.nextDouble();
+
+		System.out.print("Digite a segunda nota: ");
+		double nota2 = input.nextDouble();
+
+		double media = (nota1 + nota2) / 2;
+
+		if (media >= 7) {
+			System.out.println("Aprovado");
+		} else {
+			System.out.print("Digite a terceira nota: ");
+			double nota3 = input.nextDouble();
+
+			media = (nota1 + nota2 + (nota3 * 2)) / 4;
+
+			if (media >= 6) {
+				System.out.println("Aprovado");
+			} else {
+				System.out.println("Reprovado");
+			}
+		}
+
+		input.close();
+	}
+}
+
+(5)
+package ficha2;
+import java.util.Scanner;
+
+public class ex5 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Digite um número inteiro entre 1 e 7: ");
+		int numero = input.nextInt();
+
+		String dia;
+
+		switch (numero) {
+		case 1:
+			dia = "Domingo";
+			break;
+		case 2:
+			dia = "Segunda-feira";
+			break;
+		case 3:
+			dia = "Terça-feira";
+			break;
+		case 4:
+			dia = "Quarta-feira";
+			break;
+		case 5:
+			dia = "Quinta-feira";
+			break;
+		case 6:
+			dia = "Sexta-feira";
+			break;
+		case 7:
+			dia = "Sábado";
+			break;
+		default:
+			dia = "Dia Inválido";
+			break;
+		}
+
+		System.out.println(dia);
+
+		input.close();
+	}
+}
+
+(6)
+package ficha2;
+import java.util.Scanner;
+
+public class ex6 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		int soma = 0;
+
+		for (int i = 1; i <= 10; i++) {
+			System.out.print("Digite o " + i + "º número inteiro: ");
+			int numero = input.nextInt();
+			soma += numero;
+		}
+
+		System.out.println("O somatório dos números é: " + soma);
+
+		input.close();
+	}
+}
+
+(7)
+package ficha2;
+import java.util.Scanner;
+
+public class ex7 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		int soma = 0;
+
+		for (int i = 1; i <= 15; i++) {
+			System.out.print("Digite a idade da " + i + "ª pessoa: ");
+			int idade = input.nextInt();
+			soma += idade;
+		}
+
+		double media = soma / 15.0;
+
+		System.out.println("A média das idades é: " + media);
+
+		input.close();
+	}
+}
+
+(8)
+package ficha2;
+import java.util.Scanner;
+
+public class ex8 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		int maior = Integer.MIN_VALUE;
+
+		for (int i = 1; i <= 10; i++) {
+			System.out.print("Digite o " + i + "º número: ");
+			int numero = input.nextInt();
+
+			if (numero > maior) {
+				maior = numero;
+			}
+		}
+
+		System.out.println("O maior número é: " + maior);
+
+		input.close();
+	}
+}
+
+(9)
+package ficha2;
+import java.util.Scanner;
+
+public class ex9 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		double maior = Double.MIN_VALUE;
+		double menor = Double.MAX_VALUE;
+
+		for (int i = 1; i <= 10; i++) {
+			System.out.print("Digite a " + i + "ª nota: ");
+			double nota = input.nextDouble();
+
+			if (nota > maior) {
+				maior = nota;
+			}
+
+			if (nota < menor) {
+				menor = nota;
+			}
+		}
+
+		System.out.println("A maior nota é: " + maior);
+		System.out.println("A menor nota é: " + menor);
+
+		input.close();
+	}
+}
+
+(10)
+package ficha2;
+import java.util.Scanner;
+
+public class ex10 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		int totalAlunos = 30;
+		int totalMasculino = 0;
+		int totalFeminino = 0;
+
+		for (int i = 1; i <= totalAlunos; i++) {
+			System.out.print("Digite o sexo do " + i + "º aluno (M/F): ");
+			String sexo = input.next();
+
+			if (sexo.equalsIgnoreCase("M")) {
+				totalMasculino++;
+			} else if (sexo.equalsIgnoreCase("F")) {
+				totalFeminino++;
+			} else {
+				System.out.println("Sexo inválido! Tente novamente.");
+				i--;
+			}
+		}
+
+		double percentualMasculino = (double) totalMasculino / totalAlunos * 100;
+		double percentualFeminino = (double) totalFeminino / totalAlunos * 100;
+
+		System.out.println("Porcentagem de alunos do sexo masculino: " + percentualMasculino + "%");
+		System.out.println("Porcentagem de alunos do sexo feminino: " + percentualFeminino + "%");
+
+		input.close();
+	}
+}
