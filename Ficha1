@@ -1,1 +1,243 @@
+(1)
+package ficha1;
+import java.util.Scanner;
 
+public class ex1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        int numero = scanner.nextInt();
+
+        int dobro = numero * 2;
+
+        System.out.println(dobro);
+    }
+}
+
+(2)
+package ficha1;
+import java.util.Scanner;
+
+public class ex2 {
+public static void main(String[] args) {
+		    Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número inteiro: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.print("Digite o segundo número inteiro: ");
+        int numero2 = scanner.nextInt();
+
+        int media = (numero1 + numero2) / 2;
+        int diferenca = (numero1 - numero2);
+        int metadeDiferenca = diferenca / 2;
+
+        System.out.println("A média aritmética de " + numero1 + " e " + numero2 + " é " + media + ".");
+        System.out.println("A metade da diferença entre " + numero1 + " e " + numero2 + " é " + metadeDiferenca + ".");
+    }
+}
+
+(3)
+package ficha1;
+import java.util.Scanner;
+
+public class ex3 {
+public static void main(String[] args) {
+		    Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a primeiro nota inteiro: ");
+        int nota1 = scanner.nextInt();
+
+        System.out.print("Digite a segundo nota inteiro: ");
+        int nota2 = scanner.nextInt();
+        
+        System.out.print("Digite a terceiro nota inteiro: ");
+        int nota3 = scanner.nextInt();
+
+        int media = (nota1 + nota2 + nota3) / 3;
+        
+        System.out.println("A média das três notas é: " + media);
+	}
+}
+
+(4)
+package ficha1;
+import java.util.Scanner;
+
+public class ex4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite o salário bruto do funcionário: ");
+        double salarioBruto = sc.nextDouble();
+
+        double desconto = salarioBruto * 0.08;
+        double salarioLiquido = salarioBruto - desconto;
+
+        System.out.printf("Salário bruto: R$ %.2f\n", salarioBruto);
+        System.out.printf("Desconto de 8%%: R$ %.2f\n", desconto);
+        System.out.printf("Salário líquido: R$ %.2f\n", salarioLiquido);
+
+        sc.close();
+    }
+}
+
+(5)
+package ficha1;
+import java.util.Scanner;
+
+public class ex5 {
+public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor de A inteiro: ");
+        int A = scanner.nextInt();
+
+        System.out.print("Digite o valor de B inteiro: ");
+        int B = scanner.nextInt();
+        
+        System.out.print("Digite o valor de C inteiro: ");
+        int C = scanner.nextInt();
+
+        
+        int deltaD = (B*B + (-4*A*C));
+        
+        System.out.println("O valor do Delta D é: " + deltaD);
+	}
+}
+
+(6)
+package ficha1;
+import java.util.Scanner;
+
+public class ex6 {
+public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a distância em KM: ");
+        int km = scanner.nextInt();
+        
+        int metro = km * 1000;
+        System.out.println(+ metro);
+	}
+}
+
+(7)
+package ficha1;
+import java.util.Scanner;
+
+public class ex7 {
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite a quilometragem inicial: ");
+        double kmInicial = sc.nextDouble();
+
+        System.out.print("Digite a quilometragem final: ");
+        double kmFinal = sc.nextDouble();
+
+        double kmPercorridos = kmFinal - kmInicial;
+
+        System.out.printf("Quilometragem percorrida: %.2f km\n", kmPercorridos);
+
+        sc.close();
+    }
+}
+
+(8)
+package ficha1;
+import java.util.Scanner;
+
+public class ex8 {
+public static void main(String[] args) {
+		  Scanner sc = new Scanner(System.in);
+		
+		    System.out.print("Digite a quantidade de alunos homens: ");
+        int aHomens = sc.nextInt();
+
+        System.out.print("Digite a quantidade de alunas mulheres: ");
+        int aMulheres = sc.nextInt();	
+        
+        System.out.print("Digite a quantidade de alunos aprovados");
+        int aprovados = sc.nextInt();
+        
+        int totalA = (aHomens + aMulheres);
+        double porcentH = ((double) aHomens / totalA) * 100.0;
+        double porcentM = ((double) aMulheres / totalA) * 100.0;
+        double porcentAprov = ((double) aprovados/ totalA) * 100.0;
+
+        System.out.println("Total de alunos: " + totalA);
+        System.out.println("Porcentagem de alunos do sexo masculino: " + porcentH + "%");
+        System.out.println("Porcentagem de alunos do sexo feminino: " + porcentM + "%");
+        System.out.println("Porcentagem de alunos aprovados: " + porcentAprov + "%");
+
+        sc.close();
+    }
+}
+
+(9)
+package ficha1;
+import java.util.Scanner;
+
+public class ex9 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Digite a quantidade de mini-games vendidos: ");
+		int qtdMiniGames = sc.nextInt();
+
+		System.out.print("Digite a quantidade de calculadoras vendidas: ");
+		int qtdCalculadoras = sc.nextInt();
+
+		System.out.print("Digite a quantidade de canetas vendidas: ");
+		int qtdCanetas = sc.nextInt();
+
+		double precoMiniGames = 6.95;
+		double precoCalcu = 3.50;
+		double precoCanetas = 1.20;
+
+		double faturamentoMiniGames = qtdMiniGames * precoMiniGames;
+		double faturamentoCalcu = qtdCalculadoras * precoCalcu;
+		double faturamentoCanetas = qtdCanetas * precoCanetas;
+
+		double faturamentoTotal = faturamentoMiniGames + faturamentoCalcu + faturamentoCanetas;
+
+		System.out.println("Faturamento de mini-games: R$" + faturamentoMiniGames);
+		System.out.println("Faturamento de calculadoras: R$" + faturamentoCalcu);
+		System.out.println("Faturamento de canetas: R$" + faturamentoCanetas);
+		System.out.println("Faturamento total: R$" + faturamentoTotal);
+
+		sc.close();
+	}
+}
+
+(10)
+package ficha1;
+import java.util.Scanner;
+
+public class ex10 {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Digite a quantidade de vitórias: ");
+		int vitorias = scanner.nextInt();
+
+		System.out.print("Digite a quantidade de empates: ");
+		int empates = scanner.nextInt();
+
+		System.out.print("Digite a quantidade de derrotas: ");
+		int derrotas = scanner.nextInt();
+
+		int jogos = vitorias + empates + derrotas;
+		int pontosDisputados = jogos * 3;
+		int pontosGanhos = (vitorias * 3) + (empates * 1);
+		int pontosPerdidos = pontosDisputados - pontosGanhos;
+
+		System.out.println("Total de jogos: " + jogos);
+		System.out.println("Pontos disputados: " + pontosDisputados);
+		System.out.println("Pontos ganhos: " + pontosGanhos);
+		System.out.println("Pontos perdidos: " + pontosPerdidos);
+	}
+}
