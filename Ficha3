@@ -1,0 +1,215 @@
+1)
+import java.util.Scanner;
+
+public class ex1 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // leitura das informações do produto
+        System.out.print("Código do produto: ");
+        int codigo = input.nextInt();
+
+        System.out.print("Quantidade: ");
+        int quantidade = input.nextInt();
+
+        System.out.print("Preço unitário: R$");
+        double precoUnitario = input.nextDouble();
+
+        System.out.print("Forma de pagamento (1 - Dinheiro, 2 - Cheque, 3 - Cartão débito, 4 - Cartão crédito): ");
+        int formaPagamento = input.nextInt();
+
+        // cálculo do desconto e do valor final a pagar
+        double valorTotal = quantidade * precoUnitario;
+        double desconto = 0;
+
+        switch (formaPagamento) {
+            case 1: // dinheiro
+                desconto = valorTotal * 0.1;
+                break;
+            case 2: // cheque
+                desconto = valorTotal * 0.02;
+                break;
+            case 3: // cartão débito
+                desconto = valorTotal * 0.05;
+                break;
+            case 4: // cartão crédito
+                desconto = valorTotal * 0.05;
+                break;
+            default:
+                System.out.println("Forma de pagamento inválida.");
+                System.exit(0);
+        }
+
+        double valorFinal = valorTotal - desconto;
+
+        System.out.println("Valor do desconto: R$" + desconto);
+        System.out.println("Valor final a pagar: R$" + valorFinal);
+
+        input.close();
+    }
+}
+
+2)
+import java.util.Scanner;
+
+public class ex2 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // leitura dos valores de X, Y e Z
+        System.out.print("Digite o valor de X: ");
+        double x = input.nextDouble();
+
+        System.out.print("Digite o valor de Y: ");
+        double y = input.nextDouble();
+
+        System.out.print("Digite o valor de Z: ");
+        double z = input.nextDouble();
+
+        // verificação se os valores formam um triângulo
+        if ((x < y + z) && (y < x + z) && (z < x + y)) {
+            System.out.print("Os valores formam um triângulo ");
+
+            // classificação do triângulo como equilátero, isósceles ou escaleno
+            if (x == y && y == z) {
+                System.out.println("equilátero.");
+            } else if (x == y || x == z || y == z) {
+                System.out.println("isósceles.");
+            } else {
+                System.out.println("escaleno.");
+            }
+        } else {
+            System.out.println("Os valores não formam um triângulo.");
+        }
+        input.close();
+    }
+}
+
+3)
+import java.util.Scanner;
+
+public class ex3 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // leitura dos dados da amostra
+        System.out.print("Digite o número da amostra: ");
+        int numAmostra = input.nextInt();
+
+        System.out.print("Digite o conteúdo de carbono (%): ");
+        double carbono = input.nextDouble();
+
+        System.out.print("Digite a dureza Rockwell: ");
+        int dureza = input.nextInt();
+
+        System.out.print("Digite a resistência à tração (psi): ");
+        int resistencia = input.nextInt();
+
+        // classificação do aço de acordo com os testes
+        int grauAco;
+        if (carbono < 7 && dureza > 50 && resistencia > 80000) {
+            grauAco = 10;
+        } else if (carbono < 7 && dureza > 50) {
+            grauAco = 9;
+        } else if (carbono < 7) {
+            grauAco = 8;
+        } else {
+            grauAco = 7;
+        }
+
+        // exibição do grau do aço
+        System.out.println("O aço da amostra " + numAmostra + " obteve o grau " + grauAco);
+
+        input.close();
+    }
+}
+
+4)
+import java.util.Scanner;
+
+public class ex4 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // leitura das medidas das arestas
+        System.out.print("Digite a medida da aresta a: ");
+        double a = input.nextDouble();
+
+        System.out.print("Digite a medida da aresta b: ");
+        double b = input.nextDouble();
+
+        System.out.print("Digite a medida da aresta c: ");
+        double c = input.nextDouble();
+
+        // cálculo da diagonal
+        double l = Math.sqrt(a*a + b*b);
+        double diagonal = Math.sqrt(l*l + c*c);
+
+        // exibição do resultado
+        System.out.println("A diagonal do paralelepípedo é: " + diagonal);
+
+        input.close();
+    }
+}
+
+5)
+import java.util.Scanner;
+
+public class ex5 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // leitura da massa inicial
+        System.out.print("Digite a massa inicial (em gramas): ");
+        double massaInicial = input.nextDouble();
+
+        // cálculo do tempo necessário para a massa ser menor que 0,5 grama
+        double tempo = 0;
+        double massaAtual = massaInicial;
+
+        while (massaAtual >= 0.5) {
+            massaAtual /= 2;
+            tempo += 50;
+        }
+
+        // exibição dos resultados
+        System.out.println("Massa inicial: " + massaInicial + " g");
+        System.out.println("Massa final: " + massaAtual + " g");
+        System.out.println("Tempo necessário: " + tempo + " s");
+
+        input.close();
+    }
+}
+
+6)
+import java.util.Scanner;
+
+public class ex6 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // leitura das coordenadas dos pontos
+        System.out.print("Digite a coordenada X do primeiro ponto: ");
+        double x1 = input.nextDouble();
+        System.out.print("Digite a coordenada Y do primeiro ponto: ");
+        double y1 = input.nextDouble();
+        System.out.print("Digite a coordenada X do segundo ponto: ");
+        double x2 = input.nextDouble();
+        System.out.print("Digite a coordenada Y do segundo ponto: ");
+        double y2 = input.nextDouble();
+
+        // cálculo da distância entre os pontos
+        double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+        // exibição do resultado
+        System.out.println("A distância entre os pontos é: " + distancia);
+
+        input.close();
+    }
+}
